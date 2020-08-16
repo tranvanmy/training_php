@@ -1,1 +1,0 @@
-Hôm nay em đã tìm hiểu về biến và hằng, các kiểu dữ liệu, toán tử và biểu thức, lệnh if-else trong php ạ
