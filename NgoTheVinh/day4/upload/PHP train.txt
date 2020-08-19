@@ -1,0 +1,50 @@
+static $bien : gọi trong hàm . giúp lưu lại giá trị
+global $bien_toan_cuc : trong hàm . giúp lấy biến toàn cục
+----------------
+GET : dữ liệu gửi qua link URL nằm trên browser. Server sẽ phân tích tất cả những thông tin đằng sau dấu hỏi (?) chính là phần dữ liệu mà Client gửi lên. rồi trả về .
+	GET phù hợp vs số lượng dữ liệu ít . và không có các thông tin nhạy cảm như password, thẻ ngân hàng ...
+POST: Có tính bảo mật hơn (gửi dl thông qua form html). nhân dạng thông qua tên (name) của các input(trong form html).
+
+--------------STRING--------------
++ addcslashes ($str, $char_list): thêm các kí tự gạch chéo trước những kí $str mà ta liệt kê ở $char_list.
++ addslashes ( $str ): Thêm dấu gạch chéo trc (‘   “   \)
++ stripslashes ($str): xóa các ký tự \ trong chuỗi $str.
++ crc32 ( $str ) : chuyển thành dãy số nguyên
++ explode ( $delimiter , $string): tách $string thành mảng vs ktu tách mảng là $delimiter 
++ implode($delimiter, $piecesarray): ngược lại explode (Chuyển mảng thành chuỗi , phân tách nhau bởi $delimiter).
++ ord ( $string ) : Hàm này trả về mã ASCII của ký tự đầu tiên trong chuỗi $string.
++ strlen($string): Đến số lượng kí tự trong chuỗi
++ str_word_count($str): Hàm này trả về số từ trong chuỗi $str.
++ str_repeat(  $str,  int $n  ): lặp lại chuối $n lần
++ str_replace( $chuoi_tim, $chuoi_thay_the, $chuoi_nguon ):tìm và thay thế . Để thay thế nhiều chuỗi ta có thể dùng mảng để truyền vào.
++ md5( $str): Hàm này mã hóa chuỗi thành một dãy 32 ký tự (mã hóa md5).
++ sha1($string): Hàm này mã hóa chuỗi thành một dãy 40 ký tự (mã hóa sha1).
++ htmlentities($str) or htmlspecialchars( $string): Hàm này chuyển các thể html trong chuỗi $str sang  dạng thực thể của chúng (html sẽ ko còn tác dụng nên bạn có thể echo ra bên ngoài).
++ html_entity_decode($string) or htmlspecialchars_decode($string): ngược lại vs htmlentities($str) or htmlspecialchars( $string)
++ strip_tags( $string, $allow_tags ): Hàm này bỏ các thẻ html trong chuỗi $string được khai báo ở $allow_tags. 
++ substr( $string,  $start, $length ): cắt chuỗi 
++ strstr( $string, $ky_tu_cho_truoc ): Tách một chuỗi bắt đầu từ  $ky_tu_cho_truoc cho đến hết chuỗi.
++ strpos($str, $chuoi_tim ): Tìm vị trí của chuỗi $chuoi_tim trong chuỗi $str, kết quả trả về false nếu không tìm thấy.
++ strtolower($str): chuyển tất cả các ký tự chuỗi $str sang chữ thường.
++ strtoupper($string ): Chuyển tất cả các ký tự chuỗi $str sang chữ hoa.
++ ucfirst( $string ): Chuyển ký tự đầu tiên trong chuỗi $string sang chữ thường.
++ ucwords( $string ): Chuyên từ đầu tiên trong chuỗi $string sang chữ hoa.
++ trim($string, $ky_tu): Xóa ký tự $ky_tu nằm ở đầu và cuối chuỗi $str, nếu ta không nhập $ky_tu thì mặc định nó hiểu là xóa khoảng trắng.
++ ltrim($string, $ky_tu): tt trim nhưng chỉ xóa trái
++ rtrim($string, $ky_tu): tt trim nhưng chỉ xóa Phai
++ json_decode($json): chuyển js về mảng ...
+
+----------------ARRAY------------------------------------
++ array_combine($array_keys, $array_values) : trộn mảng vs $array_key là ds key còn $ _values là ds values
++ array_push($stack, "apple", "raspberry") : add vào mảng
++ $fruit = array_pop($stack): Xóa trong mảng $stack phần tử cuối cùng và trả về phần tử đã xóa.
++ array_count_values($arrCount): count values
++ array_pad($array, $size, $value): Kéo dãn mảng $array với kích thước là $size, và nếu kích thước truyền vào lớn hơn kích thước mảng $array thì giá trị $value được thêm vào, ngược lại nếu kích thước truyền vào nhỏ hơn kích thước mảng $array thì sẽ giữ nguyên. Nếu muốn giãn ở cuối mảng thì $size có giá trị dương, nếu muốn giãn ở đầu mảng thì $size có giá trị âm.
++ array_shift(&$array) : xóa ktu dau mang và lấy
++ array_unshift(&$array, $values1, $values2): add vào đầu mảng
++  in_array($needle, $haystackarray): ktra $needle có trong mảng k . nếu có trả về true
++ 12 .array_unique( $array ): loại bỏ giá trị trùng trong mảng
++ array_values ($array ): chuyển mảng aray sang dạng index (0,1,2,3...) 
+
+
+	
