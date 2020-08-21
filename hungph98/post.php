@@ -7,18 +7,27 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<form method="post" >
-		username : <input type="text" id="username" name="username" value=""><br>
-		password : <input type="pasword" id="password" name="password" value=""><br>
-		<input type="submit" name="form_click" value="Gửi Dữ Liệu"><br>
-		<?php 
-		if (isset($_POST['form_click'])) {
-			echo 'Tên đăng nhập là : '.$_POST['username'];
-			echo "<br>";
-			echo 'Mật khẩu là : '. $_POST['password'];
-		}
-		?>
+	<form method="post" action="post.php">
+		Username : <input type="text" id="username" name="username" value=""><br><br>
+		Password : <input type="pasword" id="password" name="password" value=""><br><br>
+		<input type="submit" name="form_click" value="Đăng nhập"><br>
 	</form>
+	<?php 
+	//var_dump($_POST);
+	if ($_POST['']) {
+		$username = isset($_POST['username']) ? $_POST['username'] : "";
+		$password = isset($_POST['password']) ? $_POST['password'] : "";
+		if (!$username || !$pasword) {
+			echo "Bạn vui lòng nhập đầy đủ thông tin";
+		}
+		if ($username != 'hungph98' || $password != '12345') {
+			echo "Thông tin đăng nhập sai ";
+		}
+		else{
+			echo "Đăng nhập thành công";
+		}
+	}
+	?>
 </body>
 </html>
 
